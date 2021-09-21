@@ -1,0 +1,47 @@
+сборка
+docker-compose build
+
+образы
+docker images
+
+запуск
+docker-compose up
+
+сначала сбилдит образ, а затем запустит
+dev режим
+docker-compose -f docker-compose.yml -f docker-compose.development.yml up --build
+prod режим
+docker-compose up --build
+
+логи
+docker logs название сервеса
+
+все команды хранилища
+docker volume
+
+список запущенных контейнеров
+docker ps
+
+список всех контейнеров
+docker ps -a
+
+для фронта
+npm i -g serve
+
+exec выполняет команду внутри контейнера
+docker exec -it realworld-docker-api sh
+
+nginx
+посмотреть запущен ли nginx
+ps aux | grep nginx
+
+для проверки домена realworld-docker.com
+открыть файл hosts
+добавить запись 
+127.0.0.1 realworld-docker.com
+127.0.0.1 realworld-docker.local
+
+сети
+docker network
+список сетей
+docker network ls
